@@ -5,13 +5,10 @@ import { List, ListInput, Icon } from 'framework7-react';
 
 type TTextInputComponentProps = {};
 
-export class TextInputComponent extends React.PureComponent<TTextInputComponentProps> {
-  handleInputClear = () => {
-    console.log('handleInputClear');
-    console.log(this.props.input.value);
-    return this.props.input.value = '';
-    // console.log(this.props.input.value);
-  }
+export class TextInputComponent extends React.PureComponent<TTextInputComponentProps> {  
+  // handleInputClear = () => {
+  //   this.props.handleInputClear(this.props.input.value);
+  // }
   
   render() {
     const {
@@ -26,9 +23,6 @@ export class TextInputComponent extends React.PureComponent<TTextInputComponentP
           label={label}
           type={type}
           placeholder={label}
-          clearButton
-          onInputClear={this.handleInputClear}
-          // value={value}
           {...input}
         />
       </List>

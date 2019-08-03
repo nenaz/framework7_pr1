@@ -8,6 +8,10 @@ type TTextInputFieldProps = {
   label: string,
 };
 
+// const handleInputClear = (value: string) => {
+//   return '';
+// }
+
 export const TextInputField = (props: TTextInputFieldProps) => {
   console.log('props', props)
   return (
@@ -18,6 +22,7 @@ export const TextInputField = (props: TTextInputFieldProps) => {
       component={TextInputComponent}
       type="text"
       label={props.label}
+      // handleInputClear={handleInputClear}
     />
   );
 };
